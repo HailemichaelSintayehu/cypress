@@ -1,3 +1,4 @@
+import db from '@/lib/supabase/db'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -14,6 +15,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  console.log("the value of db",db)
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>
